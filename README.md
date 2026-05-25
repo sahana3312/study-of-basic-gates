@@ -49,17 +49,17 @@ Y= A⊕B
 The 'Exclusive-NOR' gate circuit does the opposite to the EX-OR gate. It will give a low output if either, but not both of its two inputs are high. The symbol is an EX-OR gate with a small circle on the output. The small circle represents inversion.
 Y= A⊕B
 
-**Procedure** 
+**Procedure**
 
-1.	Type the program in Quartus software.
+1)Type the program in Quartus software.
 
-2.	Compile and run the program.
+2)Compile and run the program.
 
-3.	Generate the RTL schematic and save the logic diagram.
+3)Generate the RTL schematic and save the logic diagram.
 
-4.	Create nodes for inputs and outputs to generate the timing diagram.
+4)Create nodes for inputs and outputs to generate the timing diagram.
 
-5.	For different input combinations generate the timing diagram.
+5)For different input combinations generate the timing diagram.
 
 
 **PROGRAM**
@@ -67,34 +67,32 @@ Y= A⊕B
 Program for logic gates and verify its truth table in quartus using Verilog programming
 ```
  Developed by:SAHANA S
- RegisterNumber:25015837
+ RegisterNumber:212225040356
 ```
 ```
- module experiment1(f1,f2,f3,f4,f5,f6,f7,a,b);
-input a,b;
-output f1,f2,f3,f4,f5,f6,f7;
-assign f1=a&b;
-assign f2=a|b;
-assign f3=~a;
-assign f4=~f1;
-assign f5=~f2;
-assign f6=a^b;
-assign f7=~(a^b);
+ module ex1(A,B,AND_G,OR_G,NOT_G,NAND_G,NOR_G,XOR_G,XNOR_G);
+input A,B;
+output AND_G,OR_G,NOT_G,NAND_G,NOR_G,XOR_G,XNOR_G;
+assign AND_G = A & B;
+assign OR_G = A | B;
+assign NOT_G = ~A;
+assign NAND_G = ~(A & B);
+assign NOR_G = ~(A | B);
+assign XOR_G = A ^ B;
+assign XNOR_G = ~(A ^ B);
 endmodule
 ```
 **Logic symbol & Truthtable**
 
-<img width="442" height="715" alt="image" src="https://github.com/user-attachments/assets/fa89d6ad-3d20-49ec-881c-5a41399233e1" />
+<img width="957" height="587" alt="image" src="https://github.com/user-attachments/assets/9fe74d00-9e8a-4769-9ed1-dd227d12a95f" />
+
 
 **RTL realization Output:** 
 
-<img width="352" height="303" alt="image" src="https://github.com/user-attachments/assets/ca535539-e50a-4807-a8d3-e5269c078d03" />
+<img width="1450" height="773" alt="image" src="https://github.com/user-attachments/assets/5aa6f64d-c12a-460f-8e9e-23f2c3ff4e79" />
 
 **RTL**
 
-<img width="1047" height="632" alt="image" src="https://github.com/user-attachments/assets/37b0ce4e-6976-4c39-bf6b-591b73fa53fb" />
-
-
 **Result:**
 
- The truth table of logic gates in Quartus II using Verilog programming is verified.
+  Thus the basic logic gates such as AND, OR, NOT, NAND, NOR, XOR and XNOR were successfully implemented using Verilog HDL in Quartus II and their truth tables were verified successfully through simulation.
